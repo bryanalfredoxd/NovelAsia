@@ -1,9 +1,14 @@
 import { useCallback } from 'react';
 
-export type GetInitialsFn = (fullName: string) => string;
+// Modificamos el tipo para aceptar string, undefined o null
+export type GetInitialsFn = (fullName?: string | null) => string;
 
 export function useInitials(): GetInitialsFn {
-    return useCallback((fullName: string): string => {
+    return useCallback((fullName?: string | null): string => {
+        // 1. SEGURIDAD: Si es undefined, null o vacío, retornamos string vacío y paramos aquí.
+        // Esto arregla el error "Cannot read properties of undefined (reading 'trim')"
+        if (!fullName) return '';
+
         const names = fullName.trim().split(' ');
 
         if (names.length === 0) return '';
