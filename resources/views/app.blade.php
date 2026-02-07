@@ -8,6 +8,6 @@
 </head>
 <body>
     <h1>NovelAsia</h1>
-    <h2>Prueba de conexion con el servidor 5</h2>
+    <h2>Prueba de conexion con el servidor, no funciono</h2>
 </body>
 </html>
