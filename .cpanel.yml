@@ -1,7 +1,5 @@
 ---
 deployment:
   tasks:
-    - export DEPLOYPATH=/home2/teleredt/public_html/novelasia.teleredtv.com
-    - /bin/cp -R * $DEPLOYPATH
-    - /usr/local/bin/php $DEPLOYPATH/artisan migrate --force
-    - /usr/local/bin/php $DEPLOYPATH/artisan optimize:clear
+    - export DEPLOYPATH=/home2/teleredt/public_html/novelasia.teleredtv.com/
+    - /bin/cp -R images $DEPLOYPATH
