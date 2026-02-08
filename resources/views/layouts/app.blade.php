@@ -1,68 +1,97 @@
 <!DOCTYPE html>
-<html class="dark" lang="es">
+{{-- Dejamos que JS gestione la clase 'dark' según la preferencia guardada --}}
+<html lang="es">
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>@yield('title', 'NovelAsia')</title>
+    <title>@yield('title', 'NovelAsia - Lee Novelas Chinas en Español')</title>
 
     {{-- Fuentes --}}
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@600;700&display=swap" rel="stylesheet">
     
-    {{-- Iconos --}}
+    {{-- Iconos Material Symbols --}}
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
 
-    {{-- Vite --}}
+    {{-- Script Anti-Flicker para Modo Oscuro (Ejecutar antes de renderizar body) --}}
+    <script>
+        if (localStorage.getItem('theme') === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark');
+        } else {
+            document.documentElement.classList.remove('dark');
+        }
+    </script>
+
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 
-<body class="bg-slate-950 font-sans text-slate-200 min-h-screen flex flex-col antialiased selection:bg-primary selection:text-white overflow-x-hidden">
+<body class="bg-[var(--color-background)] text-[var(--color-reading-text)] min-h-screen flex flex-col antialiased transition-colors duration-300 selection:bg-[var(--color-primary)] selection:text-white overflow-x-hidden">
 
-    {{-- 1. Navbar con Lógica de Sesión --}}
+    {{-- Navbar --}}
     @include('partials.navbar')
 
-    {{-- 2. Sistema de Notificaciones Flash (Toasts) --}}
+    {{-- Sistema de Notificaciones Flash (Toasts) --}}
     @if(session('success') || session('error'))
-        <div id="toast-notification" class="fixed top-24 right-4 z-50 animate-fade-in-left">
-            <div class="glass px-6 py-4 rounded-xl shadow-2xl border-l-4 {{ session('error') ? 'border-red-500' : 'border-primary' }} flex items-center gap-4 max-w-sm">
-                <div class="p-2 rounded-full {{ session('error') ? 'bg-red-500/20 text-red-400' : 'bg-primary/20 text-primary' }}">
-                    <span class="material-symbols-outlined">{{ session('error') ? 'error' : 'check_circle' }}</span>
+        <div id="toast-notification" class="fixed top-20 right-4 z-[100] transition-all duration-500 transform translate-x-0">
+            <div class="bg-[var(--color-surface)] px-5 py-4 rounded-2xl shadow-xl border border-[var(--color-border)] flex items-center gap-4 max-w-sm">
+                {{-- Icono Dinámico --}}
+                <div class="size-10 rounded-xl flex items-center justify-center shrink-0 {{ session('error') ? 'bg-red-500/10 text-red-500' : 'bg-[var(--color-primary)]/10 text-[var(--color-primary)]' }}">
+                    <span class="material-symbols-outlined font-bold">
+                        {{ session('error') ? 'error' : 'verified_user' }}
+                    </span>
                 </div>
-                <div>
-                    <h4 class="font-bold text-white text-sm">{{ session('error') ? 'Error' : '¡Éxito!' }}</h4>
-                    <p class="text-xs text-slate-300">{{ session('success') ?? session('error') }}</p>
+                
+                <div class="flex-1">
+                    <h4 class="font-bold text-sm">{{ session('error') ? 'Atención' : '¡Excelente!' }}</h4>
+                    <p class="text-xs text-[var(--color-muted-text)] leading-snug">
+                        {{ session('success') ?? session('error') }}
+                    </p>
                 </div>
-                <button onclick="document.getElementById('toast-notification').remove()" class="text-slate-500 hover:text-white ml-2">
-                    <span class="material-symbols-outlined text-sm">close</span>
+
+                <button onclick="closeToast()" class="text-[var(--color-muted-text)] hover:text-[var(--color-primary)] transition-colors">
+                    <span class="material-symbols-outlined text-lg">close</span>
                 </button>
             </div>
         </div>
         
         <script>
-            // Auto-ocultar después de 5 segundos
-            setTimeout(() => {
+            function closeToast() {
                 const toast = document.getElementById('toast-notification');
-                if(toast) {
-                    toast.style.opacity = '0';
-                    toast.style.transform = 'translateX(100%)';
-                    setTimeout(() => toast.remove(), 500);
-                }
-            }, 5000);
+                toast.classList.add('translate-x-full', 'opacity-0');
+                setTimeout(() => toast.remove(), 500);
+            }
+            setTimeout(closeToast, 5000);
         </script>
     @endif
 
-    {{-- 3. Contenido Principal --}}
-    <main class="flex-grow relative z-0">
+    {{-- Contenido Principal --}}
+    {{-- 'flex-grow' asegura que el footer siempre esté abajo incluso con poco contenido --}}
+    <main class="flex-grow w-full">
         @yield('content')
     </main>
 
-    {{-- 4. Footer --}}
-    @include('partials.footer')
+    {{-- Footer --}}
+    <footer class="mt-auto">
+        @include('partials.footer')
+    </footer>
 
     {{-- Scripts adicionales --}}
     @stack('scripts')
+
+    {{-- Script Global para el Switch de Modo Oscuro --}}
+    <script>
+        function toggleTheme() {
+            if (document.documentElement.classList.contains('dark')) {
+                document.documentElement.classList.remove('dark');
+                localStorage.setItem('theme', 'light');
+            } else {
+                document.documentElement.classList.add('dark');
+                localStorage.setItem('theme', 'dark');
+            }
+        }
+    </script>
 </body>
 </html>

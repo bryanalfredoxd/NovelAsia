@@ -5,7 +5,6 @@ use App\Http\Controllers\Auth\RegisterController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\Auth\LoginController;
-use Illuminate\Support\Facades\Artisan;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,7 +14,7 @@ use Illuminate\Support\Facades\Artisan;
 
 // --- PÁGINA DE INICIO ---
 Route::get('/', function () {
-    return view('welcome'); // O 'home' si ya creaste esa vista
+    return view('welcome');
 })->name('home');
 
 // --- DASHBOARD (Solo accesible si estás logueado - opcional middleware) ---
@@ -46,11 +45,4 @@ Route::post('/logout', function () {
 Route::get('/logout-force', function () {
     Auth::logout();
     return redirect('/register');
-});
-
-// Vincular Storage:link 
-
-Route::get('/link-storage', function () {
-    Artisan::call('storage:link');
-    return "Enlace simbólico creado con éxito";
 });
