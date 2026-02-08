@@ -31,7 +31,7 @@
 <body class="bg-[var(--color-background)] text-[var(--color-reading-text)] min-h-screen flex flex-col antialiased transition-colors duration-300 selection:bg-[var(--color-primary)] selection:text-white overflow-x-hidden">
 
     {{-- Navbar --}}
-    @include('partials.navbar')
+    @include('layouts.partials.navbar')
 
     {{-- Sistema de Notificaciones Flash (Toasts) --}}
     @if(session('success') || session('error'))
@@ -75,7 +75,7 @@
 
     {{-- Footer --}}
     <footer class="mt-auto">
-        @include('partials.footer')
+        @include('layouts.partials.footer')
     </footer>
 
     {{-- Scripts adicionales --}}

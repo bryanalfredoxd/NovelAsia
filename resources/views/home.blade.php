@@ -4,7 +4,7 @@
 
 @section('content')
 <main class="app-container pt-20 pb-20 md:pb-12">
-    @include('home.sections.search')
+
 
     @include('home.sections.hero')
 

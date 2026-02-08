@@ -94,6 +94,11 @@
                                     <span class="material-symbols-outlined text-xl" id="eye-icon">visibility_off</span>
                                 </button>
                             </div>
+                                @error('password')
+                                    <span class="text-red-500 text-xs font-medium flex items-center gap-1 ml-1">
+                                        <span class="material-symbols-outlined text-sm">error</span> {{ $message }}
+                                    </span>
+                                @enderror
                         </div>
 
                         {{-- Recordarme --}}

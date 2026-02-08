@@ -14,8 +14,7 @@
             </a>
         </div>
         
-        {{-- SEARCH BAR --}}
-        @unless(request()->routeIs('login') || request()->routeIs('register'))
+        {{-- SEARCH BAR (desktop) --}}
         <div class="flex-1 max-w-xl">
             <label class="relative flex items-center w-full group">
                 <div class="absolute left-4 text-[var(--color-muted-text)] group-focus-within:text-[var(--color-primary)] transition-colors">
@@ -28,7 +27,6 @@
                 />
             </label>
         </div>
-        @endunless
 
         {{-- ACTIONS --}}
         <div class="flex items-center gap-2 shrink-0">
@@ -101,6 +99,22 @@
         @endauth
     </div>
 </nav>
+
+{{-- Mobile Search (below top bar) --}}
+<div class="md:hidden pt-16 px-4 bg-transparent">
+    <div class="w-full max-w-xl mx-auto">
+        <label class="relative flex items-center w-full group">
+            <div class="absolute left-4 text-[var(--color-muted-text)] group-focus-within:text-[var(--color-primary)] transition-colors">
+                <span class="material-symbols-outlined text-xl">search</span>
+            </div>
+            <input 
+                class="w-full h-11 bg-[var(--color-background)] border border-[var(--color-border)] rounded-full pl-12 pr-4 text-sm text-[var(--color-reading-text)] focus:ring-2 focus:ring-[var(--color-primary)]/20 focus:border-[var(--color-primary)] focus:outline-none transition-all" 
+                placeholder="Buscar historias épicas..." 
+                type="text"
+            />
+        </label>
+    </div>
+</div>
 
 {{-- Mobile Bottom Navigation --}}
 <nav class="md:hidden fixed bottom-0 left-0 right-0 z-50 bg-[var(--color-surface)] border-t border-[var(--color-border)] px-6 py-3 pb-8 flex items-center justify-between shadow-[0_-4px_12px_rgba(0,0,0,0.05)]">
