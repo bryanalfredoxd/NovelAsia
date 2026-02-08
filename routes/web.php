@@ -14,7 +14,7 @@ use App\Http\Controllers\Auth\LoginController;
 
 // --- PÁGINA DE INICIO ---
 Route::get('/', function () {
-    return view('welcome');
+    return view('home');
 })->name('home');
 
 // --- DASHBOARD (Solo accesible si estás logueado - opcional middleware) ---
