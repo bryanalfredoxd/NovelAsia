@@ -1,38 +1,51 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
-Route::get('/', function () {
-    return view('home');
-});
-
-Route::get('/register', function () {
-    return view('register');
-});
-
+use App\Http\Controllers\Auth\RegisterController;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use App\Http\Controllers\Auth\LoginController;
 
-Route::get('/login', function () {
-    return view('login');
-});
+/*
+|--------------------------------------------------------------------------
+| Web Routes
+|--------------------------------------------------------------------------
+*/
 
-Route::post('/login', function (Request $request) {
-    // Usuario estático para pruebas
-    if ($request->email === 'admin@sakura.com' && $request->password === 'password') {
-        return redirect('/dashboard');
-    }
-    return back();
-});
+// --- PÁGINA DE INICIO ---
+Route::get('/', function () {
+    return view('welcome'); // O 'home' si ya creaste esa vista
+})->name('home');
 
-Route::get('/register', function () {
-    return view('register');
-});
-
-Route::post('/register', function () {
-    // Simular registro exitoso
-    return redirect('/dashboard');
-});
-
+// --- DASHBOARD (Solo accesible si estás logueado - opcional middleware) ---
 Route::get('/dashboard', function () {
     return view('dashboard');
+})->name('dashboard'); // Importante: darle nombre para el redirect del controlador
+
+// --- RUTAS DE REGISTRO (CONECTADAS AL CONTROLADOR) ---
+// 1. Mostrar formulario (GET)
+Route::get('/register', [RegisterController::class, 'showRegistrationForm'])->name('register');
+
+// 2. Procesar datos (POST) - Aquí es donde guarda en la DB
+Route::post('/register', [RegisterController::class, 'register']);
+
+
+// Rutas de Login
+Route::get('/login', [LoginController::class, 'showLoginForm'])->name('login');
+Route::post('/login', [LoginController::class, 'login']);
+
+
+
+// --- UTILIDAD: CERRAR SESIÓN (Para probar registros nuevos) ---
+Route::post('/logout', function () {
+    Auth::logout();
+    request()->session()->invalidate();
+    request()->session()->regenerateToken();
+    return redirect('/');
+})->name('logout');
+
+// Ruta GET temporal para cerrar sesión rápido escribiendo la URL
+Route::get('/logout-force', function () {
+    Auth::logout();
+    return redirect('/register');
 });
