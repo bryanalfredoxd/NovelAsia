@@ -5,6 +5,7 @@ use App\Http\Controllers\Auth\RegisterController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\Auth\LoginController;
+use Illuminate\Support\Facades\Artisan;
 
 /*
 |--------------------------------------------------------------------------
@@ -29,12 +30,9 @@ Route::get('/register', [RegisterController::class, 'showRegistrationForm'])->na
 // 2. Procesar datos (POST) - Aquí es donde guarda en la DB
 Route::post('/register', [RegisterController::class, 'register']);
 
-
 // Rutas de Login
 Route::get('/login', [LoginController::class, 'showLoginForm'])->name('login');
 Route::post('/login', [LoginController::class, 'login']);
-
-
 
 // --- UTILIDAD: CERRAR SESIÓN (Para probar registros nuevos) ---
 Route::post('/logout', function () {
@@ -48,4 +46,11 @@ Route::post('/logout', function () {
 Route::get('/logout-force', function () {
     Auth::logout();
     return redirect('/register');
+});
+
+// Vincular Storage:link 
+
+Route::get('/link-storage', function () {
+    Artisan::call('storage:link');
+    return "Enlace simbólico creado con éxito";
 });
