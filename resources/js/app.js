@@ -1,4 +1,5 @@
 import './bootstrap';
+import 'preline';
 import Alpine from 'alpinejs';
 import { Chart, registerables } from 'chart.js';
 

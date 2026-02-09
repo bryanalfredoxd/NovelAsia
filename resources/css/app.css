@@ -3,6 +3,10 @@
 @import "@fontsource/merriweather/400.css";
 @import "@fontsource/merriweather/700.css";
 
+/* Preline UI */
+@import "../../node_modules/preline/variants.css";
+@source "../../node_modules/preline/dist/*.js";
+
 
 /* Crear una clase para el lector */
 .font-novel {

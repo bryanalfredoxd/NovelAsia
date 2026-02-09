@@ -9,7 +9,6 @@ export default defineConfig({
             refresh: true,
         }),
         tailwindcss(),
-        require('preline/plugin'),
     ],
     server: {
         watch: {
