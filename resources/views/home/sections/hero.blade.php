@@ -25,10 +25,10 @@
         </p>
         
         <div class="flex items-center gap-3">
-            <button class="bg-[var(--color-primary)] hover:bg-[var(--color-primary-dark)] text-white px-8 py-3 rounded-xl font-bold text-sm transition-all active:scale-95 flex items-center gap-2 shadow-md">
+            <a href="{{ route('book.info', ['el-alquimista-reencarnado']) }}" class="bg-[var(--color-primary)] hover:bg-[var(--color-primary-dark)] text-white px-8 py-3 rounded-xl font-bold text-sm transition-all active:scale-95 flex items-center gap-2 shadow-md">
                 <span class="material-symbols-outlined">auto_stories</span>
                 Leer Ahora
-            </button>
+            </a>
             <button class="p-3 rounded-xl bg-[var(--color-surface)] border border-[var(--color-border)] text-[var(--color-reading-text)] hover:bg-[var(--color-background)] transition-all">
                 <span class="material-symbols-outlined text-xl">bookmark</span>
             </button>

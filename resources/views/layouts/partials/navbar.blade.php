@@ -36,7 +36,7 @@
                 <span class="material-symbols-outlined hidden dark:block">light_mode</span>
             </button>
 
-            <a href="#" class="px-4 py-2 text-sm font-bold text-[var(--color-muted-text)] hover:text-[var(--color-primary)] transition-colors flex items-center gap-2 group">
+            <a href="{{ route('library') }}" class="px-4 py-2 text-sm font-bold text-[var(--color-muted-text)] hover:text-[var(--color-primary)] transition-colors flex items-center gap-2 group">
                 <span class="material-symbols-outlined group-hover:animate-pulse">library_books</span>
                 <span class="hidden lg:inline">Biblioteca</span>
             </a>
@@ -116,29 +116,4 @@
     </div>
 </div>
 
-{{-- Mobile Bottom Navigation --}}
-<nav class="md:hidden fixed bottom-0 left-0 right-0 z-50 bg-[var(--color-surface)] border-t border-[var(--color-border)] px-6 py-3 pb-8 flex items-center justify-between shadow-[0_-4px_12px_rgba(0,0,0,0.05)]">
-    <a href="{{ route('home') }}" class="flex flex-col items-center gap-1 {{ request()->routeIs('home') ? 'text-[var(--color-primary)]' : 'text-[var(--color-muted-text)]' }}">
-        <span class="material-symbols-outlined {{ request()->routeIs('home') ? 'fill-current' : '' }}">home</span>
-        <span class="text-[10px] font-bold">Inicio</span>
-    </a>
-    
-    <a href="#" class="flex flex-col items-center gap-1 text-[var(--color-muted-text)]">
-        <span class="material-symbols-outlined">library_books</span>
-        <span class="text-[10px] font-bold">Librería</span>
-    </a>
-    
-    <button class="size-14 -mt-12 bg-[var(--color-primary)] text-white rounded-full flex items-center justify-center shadow-lg border-4 border-[var(--color-background)] active:scale-90 transition-transform">
-        <span class="material-symbols-outlined text-2xl">search</span>
-    </button>
-    
-    <a href="#" class="flex flex-col items-center gap-1 text-[var(--color-muted-text)]">
-        <span class="material-symbols-outlined">auto_awesome</span>
-        <span class="text-[10px] font-bold">Explorar</span>
-    </a>
-    
-    <a href="#" class="flex flex-col items-center gap-1 text-[var(--color-muted-text)]">
-        <span class="material-symbols-outlined">person</span>
-        <span class="text-[10px] font-bold">Perfil</span>
-    </a>
-</nav>
+

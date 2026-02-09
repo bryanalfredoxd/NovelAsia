@@ -22,6 +22,27 @@ Route::get('/dashboard', function () {
     return view('dashboard');
 })->name('dashboard'); // Importante: darle nombre para el redirect del controlador
 
+
+Route::get('/book', function () {
+    return view('books.book-info');
+})->name('book.info');
+
+Route::get('/author', function () {
+    return view('books.author.author-info');
+})->name('author.info');
+
+Route::get('/library', function () {
+    return view('user.library');
+})->name('library');
+
+Route::get('/search', function () {
+    return view('books.search');
+})->name('search');
+
+Route::get('/chapter', function () {
+    return view('books.read-chapter');
+})->name('chapter.read');
+
 // --- RUTAS DE REGISTRO (CONECTADAS AL CONTROLADOR) ---
 // 1. Mostrar formulario (GET)
 Route::get('/register', [RegisterController::class, 'showRegistrationForm'])->name('register');

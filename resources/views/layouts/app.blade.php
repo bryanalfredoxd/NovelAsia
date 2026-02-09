@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
+
     <title>@yield('title', 'NovelAsia - Lee Novelas Chinas en Español')</title>
 
     {{-- Fuentes --}}
@@ -13,9 +15,6 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@600;700&display=swap" rel="stylesheet">
     
-    {{-- Iconos Material Symbols --}}
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
-
     {{-- Script Anti-Flicker para Modo Oscuro (Ejecutar antes de renderizar body) --}}
     <script>
         if (localStorage.getItem('theme') === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
@@ -25,7 +24,7 @@
         }
     </script>
 
-    @vite(['resources/css/app.css', 'resources/js/app.js'])
+    
 </head>
 
 <body class="bg-[var(--color-background)] text-[var(--color-reading-text)] min-h-screen flex flex-col antialiased transition-colors duration-300 selection:bg-[var(--color-primary)] selection:text-white overflow-x-hidden">

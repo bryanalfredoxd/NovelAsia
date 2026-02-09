@@ -1,4 +1,13 @@
 @import "tailwindcss";
+@import "material-symbols/index.css";
+@import "@fontsource/merriweather/400.css";
+@import "@fontsource/merriweather/700.css";
+
+
+/* Crear una clase para el lector */
+.font-novel {
+    font-family: "Merriweather", serif;
+}
 
 @theme {
     /* 1. Definición de la paleta NovelAsia (Valores base/Light) */
