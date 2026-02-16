@@ -5,6 +5,8 @@ use App\Http\Controllers\Auth\RegisterController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\Auth\LoginController;
+use App\Http\Controllers\LecturaController;
+use App\Http\Controllers\NovelaController;
 
 /*
 |--------------------------------------------------------------------------
@@ -39,9 +41,7 @@ Route::get('/search', function () {
     return view('books.search');
 })->name('search');
 
-Route::get('/chapter', function () {
-    return view('books.read-chapter');
-})->name('chapter.read');
+Route::get('/chapter/{id_capitulo}', [LecturaController::class, 'show'])->name('chapter.read');
 
 // --- RUTAS DE REGISTRO (CONECTADAS AL CONTROLADOR) ---
 // 1. Mostrar formulario (GET)
@@ -67,3 +67,16 @@ Route::get('/logout-force', function () {
     Auth::logout();
     return redirect('/register');
 });
+
+// Rutas de lectura
+Route::prefix('lectura')->name('lectura.')->group(function () {
+    Route::get('/capitulo/{id_capitulo}', [LecturaController::class, 'show'])->name('show');
+    Route::get('/novela/{id_novela}/capitulo/{numero_capitulo}', [LecturaController::class, 'showByNumber'])->name('showByNumber');
+    
+    // Rutas AJAX
+    Route::post('/capitulo/{id_capitulo}/progreso', [LecturaController::class, 'guardarProgreso'])->name('guardarProgreso');
+    Route::post('/configuracion', [LecturaController::class, 'cambiarConfiguracion'])->name('configuracion');
+});
+
+// Añade esto después de las rutas de lectura
+Route::get('/novela/{id_novela}', [App\Http\Controllers\NovelaController::class, 'show'])->name('novelas.show');

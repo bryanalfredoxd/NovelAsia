@@ -1,0 +1,118 @@
+[2026-02-16 01:21:29] Conectado a la base de datos correctamente
+[2026-02-16 01:21:29] === INICIANDO PROCESO DE TRADUCCIÓN ===
+[2026-02-16 01:21:29] Límite: 10 capítulos, Idioma: español, Prioridad mínima: 1
+[2026-02-16 01:21:29] Se encontraron 10 capítulos para traducir
+[2026-02-16 01:21:29] --- Procesando capítulo ID: 90 ---
+[2026-02-16 01:21:29] Novela: 剛轉職法師，技能成精了什麼鬼？ - Capítulo 1: 第1章 技能離家出走了？
+[2026-02-16 01:21:29] Traduciendo título...
+[2026-02-16 01:21:31] ✓ Título traducido: Capítulo 1  
+¿Se ha fugado mi habilidad?
+[2026-02-16 01:21:31] Traduciendo contenido (3641 caracteres)...
+[2026-02-16 01:21:43] ✓ Contenido traducido (8599 caracteres)
+[2026-02-16 01:21:43] ✓ Traducción guardada correctamente
+[2026-02-16 01:21:46] --- Procesando capítulo ID: 91 ---
+[2026-02-16 01:21:46] Novela: 剛轉職法師，技能成精了什麼鬼？ - Capítulo 2: 第2章 離譜，自行領悟『多重爆裂火球』？
+[2026-02-16 01:21:46] Traduciendo título...
+[2026-02-16 01:21:48] ✓ Título traducido: Capítulo 2. ¡Increíble! ¿Comprendiendo por sí solo «Bola de Fuego Múltiple Explosiva»?
+[2026-02-16 01:21:48] Traduciendo contenido (2891 caracteres)...
+[2026-02-16 01:21:58] ✓ Contenido traducido (7443 caracteres)
+[2026-02-16 01:21:58] ✓ Traducción guardada correctamente
+[2026-02-16 01:22:01] --- Procesando capítulo ID: 92 ---
+[2026-02-16 01:22:01] Novela: 剛轉職法師，技能成精了什麼鬼？ - Capítulo 3: 第3章 說好當二世祖，你偷摸練級？
+[2026-02-16 01:22:01] Traduciendo título...
+[2026-02-16 01:22:03] ✓ Título traducido: Capítulo 3  
+Se suponía que serías un segundo generación rico ocioso, ¿y en secreto estás subiendo de nivel a escondidas?
+[2026-02-16 01:22:03] Traduciendo contenido (3403 caracteres)...
+[2026-02-16 01:22:15] ✓ Contenido traducido (8168 caracteres)
+[2026-02-16 01:22:15] ✓ Traducción guardada correctamente
+[2026-02-16 01:22:18] --- Procesando capítulo ID: 93 ---
+[2026-02-16 01:22:18] Novela: 剛轉職法師，技能成精了什麼鬼？ - Capítulo 4: 第4章 只要聽話，就有好東西吃
+[2026-02-16 01:22:18] Traduciendo título...
+[2026-02-16 01:22:19] ✓ Título traducido: Capítulo 4  
+Siempre que obedezcas, habrá algo bueno que comer.
+[2026-02-16 01:22:19] Traduciendo contenido (4094 caracteres)...
+[2026-02-16 01:22:21] ✗ Error traduciendo contenido: HTTP Error: 429 - {"error":{"message":"Rate limit reached for model `moonshotai/kimi-k2-instruct-0905` in organization `org_01jwvs6ja1ep8sqpvqc5sktmtd` service tier `on_demand` on tokens per minute (TPM): Limit 10000, Used 9189, Requested 3762. Please try again in 17.706s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing","type":"tokens","code":"rate_limit_exceeded"}}
+
+[2026-02-16 01:22:21] ✓ Traducción guardada correctamente
+[2026-02-16 01:22:24] --- Procesando capítulo ID: 94 ---
+[2026-02-16 01:22:24] Novela: 剛轉職法師，技能成精了什麼鬼？ - Capítulo 5: 第5章 精神力二段引導？
+[2026-02-16 01:22:24] Traduciendo título...
+[2026-02-16 01:22:25] ✓ Título traducido: Capítulo 5  
+¿Guía de segundo nivel para la fuerza espiritual?
+[2026-02-16 01:22:25] Traduciendo contenido (2901 caracteres)...
+[2026-02-16 01:22:26] ✗ Error traduciendo contenido: HTTP Error: 429 - {"error":{"message":"Rate limit reached for model `moonshotai/kimi-k2-instruct-0905` in organization `org_01jwvs6ja1ep8sqpvqc5sktmtd` service tier `on_demand` on tokens per minute (TPM): Limit 10000, Used 8387, Requested 2696. Please try again in 6.497999999s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing","type":"tokens","code":"rate_limit_exceeded"}}
+
+[2026-02-16 01:22:26] ✓ Traducción guardada correctamente
+[2026-02-16 01:22:29] --- Procesando capítulo ID: 95 ---
+[2026-02-16 01:22:29] Novela: 剛轉職法師，技能成精了什麼鬼？ - Capítulo 6: 第6章 一心二用？
+[2026-02-16 01:22:29] Traduciendo título...
+[2026-02-16 01:22:30] ✓ Título traducido: Capítulo 6 ¿Dividir la mente en dos?
+[2026-02-16 01:22:30] Traduciendo contenido (3451 caracteres)...
+[2026-02-16 01:22:32] ✗ Error traduciendo contenido: HTTP Error: 429 - {"error":{"message":"Rate limit reached for model `moonshotai/kimi-k2-instruct-0905` in organization `org_01jwvs6ja1ep8sqpvqc5sktmtd` service tier `on_demand` on tokens per minute (TPM): Limit 10000, Used 7602, Requested 3199. Please try again in 4.806s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing","type":"tokens","code":"rate_limit_exceeded"}}
+
+[2026-02-16 01:22:32] ✓ Traducción guardada correctamente
+[2026-02-16 01:22:35] --- Procesando capítulo ID: 96 ---
+[2026-02-16 01:22:35] Novela: 剛轉職法師，技能成精了什麼鬼？ - Capítulo 7: 第7章 少爺才是真正的天才！
+[2026-02-16 01:22:35] Traduciendo título...
+[2026-02-16 01:22:36] ✓ Título traducido: Capítulo 7  
+¡El joven maestro es el verdadero genio!
+[2026-02-16 01:22:36] Traduciendo contenido (2640 caracteres)...
+[2026-02-16 01:22:44] ✓ Contenido traducido (5084 caracteres)
+[2026-02-16 01:22:44] ✓ Traducción guardada correctamente
+[2026-02-16 01:22:47] --- Procesando capítulo ID: 97 ---
+[2026-02-16 01:22:47] Novela: 剛轉職法師，技能成精了什麼鬼？ - Capítulo 8: 第8章 困難級·幽靈古堡
+[2026-02-16 01:22:47] Traduciendo título...
+[2026-02-16 01:22:48] ✓ Título traducido: Capítulo 8  
+Dificultad: Castillo Fantasma de la Categoría “Pesadilla”
+[2026-02-16 01:22:48] Traduciendo contenido (2987 caracteres)...
+[2026-02-16 01:22:49] ✗ Error traduciendo contenido: HTTP Error: 429 - {"error":{"message":"Rate limit reached for model `moonshotai/kimi-k2-instruct-0905` in organization `org_01jwvs6ja1ep8sqpvqc5sktmtd` service tier `on_demand` on tokens per minute (TPM): Limit 10000, Used 9081, Requested 2705. Please try again in 10.716s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing","type":"tokens","code":"rate_limit_exceeded"}}
+
+[2026-02-16 01:22:49] ✓ Traducción guardada correctamente
+[2026-02-16 01:22:52] --- Procesando capítulo ID: 98 ---
+[2026-02-16 01:22:52] Novela: 剛轉職法師，技能成精了什麼鬼？ - Capítulo 9: 第9章 人心不可言
+[2026-02-16 01:22:52] Traduciendo título...
+[2026-02-16 01:22:54] ✓ Título traducido: Capítulo 9  
+El corazón humano no puede ser dicho
+[2026-02-16 01:22:54] Traduciendo contenido (3046 caracteres)...
+[2026-02-16 01:22:55] ✗ Error traduciendo contenido: HTTP Error: 429 - {"error":{"message":"Rate limit reached for model `moonshotai/kimi-k2-instruct-0905` in organization `org_01jwvs6ja1ep8sqpvqc5sktmtd` service tier `on_demand` on tokens per minute (TPM): Limit 10000, Used 8276, Requested 2798. Please try again in 6.444s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing","type":"tokens","code":"rate_limit_exceeded"}}
+
+[2026-02-16 01:22:55] ✓ Traducción guardada correctamente
+[2026-02-16 01:22:58] --- Procesando capítulo ID: 99 ---
+[2026-02-16 01:22:58] Novela: 剛轉職法師，技能成精了什麼鬼？ - Capítulo 10: 第10章 咱們做技能，要有格局
+[2026-02-16 01:22:58] Traduciendo título...
+[2026-02-16 01:22:59] ✓ Título traducido: Capítulo 10 – Al crear habilidades, hay que pensar en grande.
+[2026-02-16 01:22:59] Traduciendo contenido (2825 caracteres)...
+[2026-02-16 01:23:00] ✗ Error traduciendo contenido: HTTP Error: 429 - {"error":{"message":"Rate limit reached for model `moonshotai/kimi-k2-instruct-0905` in organization `org_01jwvs6ja1ep8sqpvqc5sktmtd` service tier `on_demand` on tokens per minute (TPM): Limit 10000, Used 7510, Requested 2659. Please try again in 1.013999999s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing","type":"tokens","code":"rate_limit_exceeded"}}
+
+[2026-02-16 01:23:00] ✓ Traducción guardada correctamente
+[2026-02-16 01:23:03] === PROCESO COMPLETADO ===
+[2026-02-16 01:23:03] Capítulos traducidos: 10, Fallidos: 0
+[2026-02-16 01:35:46] Conectado a la base de datos correctamente
+[2026-02-16 01:35:46] === INICIANDO PROCESO DE TRADUCCIÓN ===
+[2026-02-16 01:35:46] Límite: 3 capítulos, Idioma: español, Prioridad mínima: 1
+[2026-02-16 01:35:46] Se encontraron 3 capítulos para traducir
+[2026-02-16 01:35:46] --- Procesando capítulo ID: 100 ---
+[2026-02-16 01:35:46] Novela: 剛轉職法師，技能成精了什麼鬼？ - Capítulo 11: 第11章 顏色不對就要燒死人家？
+[2026-02-16 01:35:46] Traduciendo título...
+[2026-02-16 01:35:48] ✓ Título traducido: Capítulo 11  
+¿Vas a quemar vivo a alguien solo porque el color no es el correcto?
+[2026-02-16 01:35:48] Traduciendo contenido (3311 caracteres)...
+[2026-02-16 01:35:58] ✓ Contenido traducido (6791 caracteres)
+[2026-02-16 01:35:58] ✓ Traducción guardada correctamente
+[2026-02-16 01:36:01] --- Procesando capítulo ID: 101 ---
+[2026-02-16 01:36:01] Novela: 剛轉職法師，技能成精了什麼鬼？ - Capítulo 12: 第12章 都是小火球乾的，與我無關啊
+[2026-02-16 01:36:01] Traduciendo título...
+[2026-02-16 01:36:03] ✓ Título traducido: Capítulo 12  
+Fueron las bolas de fuego las que lo hicieron, nada que ver conmigo.
+[2026-02-16 01:36:03] Traduciendo contenido (2787 caracteres)...
+[2026-02-16 01:36:13] ✓ Contenido traducido (6666 caracteres)
+[2026-02-16 01:36:13] ✓ Traducción guardada correctamente
+[2026-02-16 01:36:16] --- Procesando capítulo ID: 102 ---
+[2026-02-16 01:36:16] Novela: 剛轉職法師，技能成精了什麼鬼？ - Capítulo 13: 第13章 副本異變
+[2026-02-16 01:36:16] Traduciendo título...
+[2026-02-16 01:36:17] ✓ Título traducido: Capítulo 13 – Anomalía en la mazmorra
+[2026-02-16 01:36:17] Traduciendo contenido (2939 caracteres)...
+[2026-02-16 01:36:27] ✓ Contenido traducido (6807 caracteres)
+[2026-02-16 01:36:28] ✓ Traducción guardada correctamente
+[2026-02-16 01:36:31] === PROCESO COMPLETADO ===
+[2026-02-16 01:36:31] Capítulos traducidos: 3, Fallidos: 0
