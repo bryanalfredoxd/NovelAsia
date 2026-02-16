@@ -955,7 +955,7 @@ CREATE TABLE logros (
     es_repetible BOOLEAN DEFAULT FALSE,
     esta_activo BOOLEAN DEFAULT TRUE,
     fecha_creacion TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    FOREIGN KEY (id_categoria) REFERENCES categorias_logros(id_categoria) ON DELETE CASCADE,
+    FOREIGN KEY (id_categoria) REFERENCES categorias_logros(id_categoria_logro) ON DELETE CASCADE,  -- ← CORREGIDO
     INDEX idx_rango (rango),
     INDEX idx_tipo (tipo_condicion),
     INDEX idx_activo (esta_activo)
@@ -1007,6 +1007,9 @@ CREATE TABLE titulos (
     INDEX idx_tipo (tipo_obtencion),
     INDEX idx_activo (esta_activo)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+ALTER TABLE logros 
+ADD FOREIGN KEY (id_titulo_otorgado) REFERENCES titulos(id_titulo) ON DELETE SET NULL;
 
 -- ============================================
 -- TABLA 40: TITULOS_USUARIO
@@ -1087,7 +1090,7 @@ CREATE TABLE anuncios_farmeo_puntos (
     FOREIGN KEY (id_usuario) REFERENCES usuarios(id_usuario) ON DELETE CASCADE,
     FOREIGN KEY (id_campaña) REFERENCES campañas_anuncios(id_campaña) ON DELETE CASCADE,
     INDEX idx_usuario_fecha (id_usuario, fecha_visualizacion DESC),
-    INDEX idx_usuario_dia (id_usuario, DATE(fecha_visualizacion))
+    INDEX idx_usuario_fecha_simple (id_usuario, fecha_visualizacion)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- ============================================
