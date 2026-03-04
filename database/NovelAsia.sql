@@ -196,6 +196,7 @@ CREATE TABLE novelas_traduccion_espanol (
     configuracion_ia JSON COMMENT 'Parámetros de traducción utilizados',
     -- Metadata de traducción
     palabras_traducidas INT,
+    tokens INT DEFAULT 0 COMMENT 'Tokens Totales Consumidos',
     tiempo_traduccion_segundos INT,
     costo_traduccion DECIMAL(10,4) DEFAULT 0,
     revisado_manualmente BOOLEAN DEFAULT FALSE,
@@ -225,6 +226,7 @@ CREATE TABLE capitulos_traduccion_espanol (
     version_traduccion INT DEFAULT 1,
     calidad_estimada ENUM('baja', 'media', 'alta', 'excelente') DEFAULT 'media',
     palabras_traducidas INT COMMENT 'Cantidad de Palabras por capitulo en Español',
+    tokens INT DEFAULT 0 COMMENT 'Cantidad de Tokens por Capitulo',
     -- Optimización
     contenido_comprimido MEDIUMBLOB COMMENT 'Contenido comprimido',
     hash_traduccion VARCHAR(64),
